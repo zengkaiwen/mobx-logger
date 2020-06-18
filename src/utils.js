@@ -15,7 +15,7 @@ export const cloneObj = (object) => {
     function checkedType(target) {
         return Object.prototype.toString.call(target).slice(8, -1);
     }
-    function depClone(target) {
+    function deepClone(target) {
         let result, targetType = checkedType(target);
 
         if (targetType === 'Object') {
@@ -30,14 +30,14 @@ export const cloneObj = (object) => {
             if (checkedType(value) === 'Object' ||
                 checkedType(value) === 'Array'
             ) {
-                result[i] = depClone(value);
+                result[i] = deepClone(value);
             } else {
                 result[i] = value;
             }
         }
         return result;
     }
-    return depClone(toJS(object));
+    return deepClone(toJS(object));
 }
 
 export const style = (color, bold = true) => {
