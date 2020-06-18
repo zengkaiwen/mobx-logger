@@ -1,6 +1,6 @@
 {
   "name": "taro-mobx-logger",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "让使用Taro+Mobx开发微信小程序获得更友好的状态调试",
   "main": "lib/index.js",
   "scripts": {
@@ -20,6 +20,9 @@
   ],
   "keywords": [
     "mobx-logger",
+    "taro",
+    "tarojs",
+    "taro-mobx-logger",
     "logger",
     "mobx",
     "debug"
