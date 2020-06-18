@@ -1,0 +1,1 @@
+export function enableLogging(any): void

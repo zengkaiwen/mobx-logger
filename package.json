@@ -1,0 +1,44 @@
+{
+  "name": "mobx-logger",
+  "version": "1.0.0",
+  "description": "Always know what is really going on in your MobX application by logging just the right information.",
+  "main": "src/index.js",
+  "scripts": {
+    "clean": "rimraf dist lib",
+    "build": "yarn build:lib && yarn build:umd",
+    "build:lib": "babel src --out-dir lib && cp src/index.d.ts lib/index.d.ts",
+    "build:umd": "webpack --mode production",
+    "prepublish": "yarn clean && yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevin-zeus/mobx-logger.git"
+  },
+  "files": [
+    "lib/",
+    "mobx-logger.umd.js"
+  ],
+  "keywords": [
+    "mobx-logger",
+    "logger",
+    "mobx",
+    "debug"
+  ],
+  "author": "kevin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevin-zeus/mobx-logger/issues"
+  },
+  "homepage": "https://github.com/kevin-zeus/mobx-logger#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "babel-loader": "^8.1.0",
+    "mobx": "4.8.0",
+    "rimraf": "^3.0.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "typings": "lib/index.d.ts"
+}
