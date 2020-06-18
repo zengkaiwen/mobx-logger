@@ -47,7 +47,6 @@ function log(ev) {
 
 // 先触发一次action
 function logAction(ev) {
-  console.log('action', ev);
   let storeName = ev.object.constructor.name || ev.object;
   _cur_action = ev.name;
 
